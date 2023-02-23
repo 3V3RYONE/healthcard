@@ -2,11 +2,13 @@ from flask import Flask,flash,render_template,request,redirect,session
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from functools import wraps
+import os
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///healthcard.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('POSTGRESQL_URI')
 app.config['SECRET_KEY'] = "my secret key"
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 #Create DB Model
