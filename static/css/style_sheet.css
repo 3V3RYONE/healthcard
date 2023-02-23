@@ -1,0 +1,279 @@
+
+body { 
+  margin: 0;
+   font-family: Consolas,monaco,monospace;
+   background-color: #90CCF4;
+   background-image: url(../images/purple.jpg);
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;
+}
+
+.header {
+  overflow: hidden;
+  background-color: #ECECEC;
+  padding: 10px 10px;
+}
+
+/* Style the top navigation bar */
+.topnav 
+{
+overflow: hidden;
+background-color: #f3d250;
+}
+
+/* Style the topnav links */
+.topnav a
+{
+float: left;
+display: block;
+color: black;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.topnav a:hover {
+  background-color: #f7e496;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: black;
+  color: #F3D250;
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .header-right {
+    float: none;
+  }
+}
+
+/* Slideshow container */
+.slideshow-container {
+max-width: 700px;
+position: relative;
+margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+cursor: pointer;
+position: absolute;
+top: 50%;
+width: auto;
+padding: 16px;
+margin-top: -22px;
+color: white;
+font-weight: bold;
+font-size: 18px;
+transition: 0.6s ease;
+border-radius: 0 3px 3px 0;
+user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next 
+{
+right: 0;
+border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover 
+{
+background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text 
+{
+color: #f2f2f2;
+font-size: 15px;
+padding: 8px 12px;
+position: absolute;
+bottom: 8px;
+width: 100%;
+text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext 
+{
+color: #f2f2f2;
+font-size: 12px;
+padding: 8px 12px;
+position: absolute;
+top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot 
+{
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover 
+{
+background-color: #717171;
+}
+
+/* Fading animation */
+.fade 
+{
+-webkit-animation-name: fade;
+-webkit-animation-duration: 1.5s;
+animation-name: fade;
+animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade 
+{
+from {opacity: .4} 
+to {opacity: 1}
+}
+
+@keyframes fade 
+{
+from {opacity: .4} 
+to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) 
+{
+.prev, .next,.text {font-size: 11px}
+}
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #ECECEC;
+   color: black;
+   text-align: center;
+}
+
+.redbox{
+
+  border: 15px solid #F78888;
+  padding: 50px;
+  margin: 20px;
+}
+
+.center 
+{
+margin-left: auto;
+margin-right: auto;
+}
+
+
+.l2{
+    text-align: center; 
+    font-size:24px;
+    height:46px;
+}
+.l3{
+    text-align: center;
+    font-size:20px;
+    height:36px;
+}
+.column
+{
+    box-sizing: content-box;  
+    top: 50%;
+    width: 500px;
+    height: 800px;
+    padding: 30px;  
+    margin: auto ;
+    position: center;
+    border-color:#333k;
+    border: 3px solid ;
+    background-color: rgba(255,255,255,0.8);
+    
+}
+.sel
+{
+    box-sizing: content-box;
+    border-color:#333k;
+    border: 3px solid ;
+    background-color: rgba(255,255,255,0.8);
+}
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: green;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  margin: 0;
+  position: absolute;
+  left: 80%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
