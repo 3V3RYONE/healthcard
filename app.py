@@ -21,10 +21,15 @@ class customer(db.Model):
     mobno =  db.Column(db.String(200),nullable=False)
     address = db.Column(db.String(200),nullable=False)
     emergencyContact = db.Column(db.String(200),nullable=False)
+    emergencyName = db.Column(db.String(200), nullable=False)
     medicalHistory = db.Column(db.String(200),nullable=False)
     age = db.Column(db.String(200),nullable=False)
     gender = db.Column(db.String(200),nullable=False)
     aadharNo = db.Column(db.String(200),nullable=False)
+    bloodGroup = db.Column(db.String(200), nullable=False)
+    policyNumber = db.Column(db.String(200), nullable=False)
+    familyDoctorName = db.Column(db.String(200), nullable=False)
+    familyDoctorContact = db.Column(db.String(200), nullable=False)
 
 def login_required(f):
     @wraps(f)
@@ -56,8 +61,9 @@ def logincust():
 
 @app.route("/", methods=['GET','POST'])
 def home():
+    #db.drop_all()
     #db.create_all()
-    #new_customer = customer(firstname = "Beleswar", lastname = "Padhi", username = "20BRS1017", password = "health@123", email = "beleswarprasad@gmail.com", mobno = "6371332737", address = "chennai", emergencyContact = "6372600260", medicalHistory = "Prone to dust allergy", age = "21", gender = "male", aadharNo = "78937278043100")
+    #new_customer = customer(firstname = "Beleswar", lastname = "Padhi", username = "20BRS1017", password = "health@123", email = "beleswarprasad@gmail.com", mobno = "6371332737", address = "chennai", emergencyContact = "6372600260", emergencyName = "Jay Kumar Sahoo", medicalHistory = "Prone to dust allergy", age = "21", gender = "male", aadharNo = "78937278043100", bloodGroup = "O+ve", policyNumber = "LIC73829", familyDoctorName = "Dr. Dipanshu Rout", familyDoctorContact = "8790912342")
     #try:
     #    db.session.add(new_customer)
     #    db.session.commit()
@@ -81,10 +87,15 @@ def write():
             update_customer.mobno = request.form['mobno']
             update_customer.address = request.form['address']
             update_customer.emergencyContact = request.form['emergencyContact']
+            update_customer.emergencyName = request.form['emergencyName']
             update_customer.medicalHistory = request.form['medicalHistory']
             update_customer.age = request.form['age'] 
             update_customer.gender = request.form['gender']
             update_customer.aadharNo = request.form['aadharNo']
+            update_customer.bloodGroup = request.form['bloodGroup']
+            update_customer.policyNumber = request.form['policyNumber']
+            update_customer.familyDoctorName = request.form['familyDoctorName']
+            update_customer.familyDoctorContact = request.form['familyDoctorContact']
             db.session.commit()
             return render_template("readnfc.php", **{"details": customer.query.filter_by(username='20BRS1017').all()})
         except:

@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order</title>
+    <title>Write into NFC</title>
     <link rel="stylesheet" href="../static/css/style_sheet.css">
 </head>
 <body>
@@ -11,9 +11,6 @@
 		</div>
 		
 		<div class="topnav">
-			<a href="homesell.php">Home</a>
-                        <a href="sellprofile.php">Seller profile</a>
-			<a href="sellogout.php">Logout</a>
 		</div>
 
 
