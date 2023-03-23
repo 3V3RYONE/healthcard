@@ -6,7 +6,7 @@ import os
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('POSTGRESQL_URI')
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///healthcard.db"
 app.config['SECRET_KEY'] = "my secret key"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)

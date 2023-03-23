@@ -20,7 +20,7 @@
     <br>
     <center>
     <div class="column">
-        <h2 style="color:#273478">Asshole</h2>
+        <h2 style="color:#273478">NFC Writer</h2>
           <form method="post" action="writenfc.php" enctype="multipart/form-data">
           
               <label for="firstname">First Name: &nbsp;&nbsp;</label>
