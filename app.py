@@ -70,7 +70,7 @@ def home():
     #    return "successfully added beleswar"
     #except:
     #    return "There was error adding a new customer"
-    return "Welcome to NFC Reader/Writer"
+    return render_template("index.html")
 
 @app.route("/writenfc.php", methods=['GET','POST'])
 #@login_required
